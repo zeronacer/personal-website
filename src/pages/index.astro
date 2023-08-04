@@ -1,15 +1,176 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <section id="home" class="bg-pattern text-primary">
+    <div class="content">
+      <div class="heading">
+        <span id="name-subheading">Hi, ich bin</span>
+        <h1 id="name-heading">Maximilian</h1>
+      </div>
+      <ul class="pills pills--large">
+        <li><h2>Web Development</h2></li>
+        <li><h2>Symfony</h2></li>
+        <li><h2>WordPress</h2></li>
+        <li><h2>UI/UX</h2></li>
+      </ul>
+      <a href="#about" class="scroll-indicator" id="scrollindicator">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="feather feather-arrow-down"
+          ><line x1="12" y1="5" x2="12" y2="19"></line><polyline
+            points="19 12 12 19 5 12"></polyline></svg
+        >
+      </a>
+      <img src="blob1.svg" class="blob" id="blob1" />
+      <img src="blob2.svg" class="blob" id="blob2" />
+    </div>
+  </section>
+  <section id="about" class="bg-primary">
+    <div class="content">
+      <h2>Über mich</h2>
+      <p>
+        Seit ich im Alter von 9 Jahren (ca. 2008) gemeinsam mit meinem Vater
+        meine erste Website gestaltet und veröffentlicht hatte, war es mein
+        Ziel, Programmierer zu werden.
+      </p>
+      <p>
+        Mein Ziel ist es seitdem, Menschen mit Software den Alltag zuhause und
+        im Büro leichter, produktiver und unbeschwerter zu machen. Eine
+        nutzerorientierte Digitalisierung von Prozessen sowie Freude bei der
+        Benutzung sind die Kriterien, die meiner Meinung nach ausschlaggebend
+        für die Qualität von Software sind.
+      </p>
+      <p>
+        <strong>
+          Die beste Anwendung bringt Niemandem etwas, wenn sie ungern oder erst
+          gar nicht benutzt wird.
+        </strong>
+      </p>
+      <h3>Skills</h3>
+      <ul class="pills pills--large pills--slider">
+        <li>PHP</li>
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>CSS (Sass, Less)</li>
+        <li>Symfony</li>
+        <li>React</li>
+        <li>SQL</li>
+        <li>GraphQL</li>
+        <li>GSAP</li>
+        <li>Versionsverwaltung (Git)</li>
+      </ul>
+      <h3>Tools</h3>
+      <ul class="pills pills--large pills--slider">
+        <li>Jira</li>
+        <li>Visual Studio Code</li>
+        <li>PHPStorm</li>
+        <li>WordPress</li>
+        <li>Github</li>
+        <li>Office 365</li>
+        <li>Figma / Penpot</li>
+        <li>Linux Shell</li>
+      </ul>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="content">
+      <h2>Projekte</h2>
+      <div class="grid"></div>
+    </div>
+  </section>
+  <section id="contact" class="bg-secondary text-primary section--compact">
+    <div class="content">
+      <h2>Kontakt</h2>
+      <p>
+        Denkst du, dass meine Ambitionen zu deiner Firma und/oder deinem Projekt
+        passen? Dann schreib mir gern eine Nachricht!
+      </p>
+      <div class="button-group">
+        <a href="#" class="button">
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            stroke="currentColor"
+            fill="none"
+          >
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+          </svg>
+          Email
+        </a>
+        <a
+          href="https://www.xing.com/profile/Maximilian_Grabau"
+          target="_blank"
+          rel="noreferrer"
+          class="button"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            stroke="currentColor"
+            fill="none"
+          >
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Xing
+        </a>
+        <a
+          href="https://github.com/zeronacer"
+          target="_blank"
+          rel="noreferrer"
+          class="button"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            stroke="currentColor"
+            fill="none"
+          >
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            ></path>
+          </svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import gsap, { Linear } from "gsap";
+
+  gsap.to("#blob1", {
+    rotation: "360",
+    ease: Linear.easeNone,
+    repeat: -1,
+    duration: 90,
+  });
+
+  gsap.to("#blob2", {
+    rotation: "-360",
+    ease: Linear.easeNone,
+    repeat: -1,
+    duration: 80,
+  });
+
+  gsap.to("#scrollindicator", {
+    duration: 0.8,
+    y: 5,
+    ease: "circ.in",
+    repeat: -1,
+    yoyo: true,
+  });
+</script>

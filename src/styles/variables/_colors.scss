@@ -1,0 +1,48 @@
+$primary: #edf2f4;
+$secondary: #2b2d42;
+$secondary-light: #8d99ae;
+$accent: #ef233c;
+$accent-dark: #d90429;
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-secondary {
+  background-color: $secondary !important;
+}
+
+.bg-secondary-light {
+  background-color: $secondary-light !important;
+}
+
+.bg-accent {
+  background-color: $accent !important;
+}
+
+.bg-accent-dark {
+  background-color: $accent-dark !important;
+}
+
+.bg-pattern {
+  background-color: #ef233c;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+.text-secondary {
+  color: $secondary !important;
+}
+
+.hover-primary:hover {
+  color: $primary !important;
+}
+
+.text-gradient-accent {
+  background: -webkit-linear-gradient($accent, $accent-dark);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

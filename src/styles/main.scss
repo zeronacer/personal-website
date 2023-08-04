@@ -1,0 +1,52 @@
+// Variables
+@import "variables/fonts";
+@import "variables/colors";
+@import "variables/breakpoints";
+
+// Utilities
+@import "utilities/css-reset";
+@import "utilities/typography";
+
+// Pages
+@import "pages/index";
+@import "pages/project";
+
+// Components
+@import "components/navigation";
+@import "components/pills";
+@import "components/project-link";
+@import "components/buttons";
+@import "components/scrollindicator";
+@import "components/footer";
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  @include font-inter();
+  background-color: $primary;
+  color: $secondary;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+main {
+  section {
+    min-height: 100vh;
+    position: relative;
+
+    &.section--compact {
+      min-height: 0;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    margin: auto;
+    padding: 2rem 0;
+  }
+}

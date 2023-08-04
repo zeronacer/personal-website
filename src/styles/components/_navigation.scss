@@ -1,0 +1,50 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 16px;
+  z-index: 100;
+  transform: translateX(-50%);
+
+  nav {
+    ul.navigation {
+      list-style-type: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+
+      li {
+        position: relative;
+
+        a.nav-link {
+          color: $primary;
+          font-size: 24px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 300ms;
+
+          &:hover,
+          &:focus {
+            color: $secondary;
+          }
+
+          &.active {
+            color: $accent;
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    svg {
+      height: 32px;
+      color: white;
+    }
+  }
+}
