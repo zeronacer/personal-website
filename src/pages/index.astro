@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+const posts = await Astro.glob('./posts/*.md');
 ---
 
 <BaseLayout>
@@ -80,10 +82,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </ul>
     </div>
   </section>
-  <section id="projects">
+  <section id="posts">
     <div class="content">
-      <h2>Projekte</h2>
-      <div class="grid"></div>
+      <h2>Posts</h2>
+      <div class="grid">
+        {posts.map((post) => <BlogPost post={post} />)}
+      </div>
     </div>
   </section>
   <section id="contact" class="bg-secondary text-primary section--compact">

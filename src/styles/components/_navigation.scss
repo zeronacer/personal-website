@@ -1,14 +1,18 @@
 header {
   position: absolute;
   top: 0;
-  left: 50%;
-  width: 80vw;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 16px;
+  padding: 24px 128px;
   z-index: 100;
-  transform: translateX(-50%);
+
+  &.solid {
+    background-color: $accent;
+    position: inherit;
+  }
 
   nav {
     ul.navigation {
