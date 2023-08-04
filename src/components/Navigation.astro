@@ -1,15 +1,18 @@
 ---
+const {variant} = Astro.props;
 ---
 
-<header>
+<header class:list={[variant]}>
     <div class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        </a>
     </div>
     <nav>
         <ul class="navigation">
-            <li><a href="#about" class="nav-link">Über</a></li>
-            <li><a href="#projects" class="nav-link">Projekte</a></li>
-            <li><a href="#contact" class="nav-link">Kontakt</a></li>
+            <li><a href="/#about" class="nav-link">Über</a></li>
+            <li><a href="/#posts" class="nav-link">Posts</a></li>
+            <li><a href="/#contact" class="nav-link">Kontakt</a></li>
         </ul>
     </nav>
 </header>
