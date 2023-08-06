@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 import Pills from "../components/Pills.astro";
 import { sections } from "../sections.js";
+import MouseTrailer from "../components/MouseTrailer.astro";
 
 const posts = await Astro.glob("./posts/*.md");
 
@@ -38,6 +39,7 @@ const tools = [
   {
     sections.landing && (
       <section id="home" class="bg-pattern text-primary">
+        <MouseTrailer />
         <div class="content">
           <div class="heading">
             <span id="name-subheading">Hi, ich bin</span>
