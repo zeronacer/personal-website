@@ -32,18 +32,8 @@ ul.pills {
     }
   }
 
-  &.pills--slider {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: min-content;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    // snapping
-    scroll-snap-type: inline mandatory;
-    li {
-      scroll-snap-align: center;
-      scroll-padding-inline: 1rem;
-    }
+  &.pills--grid {
+    flex-wrap: wrap;
   }
 }
 
