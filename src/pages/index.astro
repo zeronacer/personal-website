@@ -1,7 +1,35 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
-const posts = await Astro.glob('./posts/*.md');
+import Pills from "../components/Pills.astro";
+
+const posts = await Astro.glob("./posts/*.md");
+
+// strings for pill lists etc.
+const cornerstones = ["Web Development", "PHP", "WordPress", "UI/UX"];
+const skills = [
+  "PHP",
+  "JavaScript",
+  "CSS",
+  "Symfony",
+  "WordPress",
+  "React",
+  "Astro",
+  "MySQL",
+  "GraphQL",
+  "GSAP",
+  "Git",
+];
+const tools = [
+  "Ubuntu",
+  "Windows 11",
+  "PHPStorm",
+  "Visual Studio Code",
+  "Figma",
+  "GitHub / GitLab",
+  "Obsidian",
+  "Jira / YouTrack",
+];
 ---
 
 <BaseLayout>
@@ -11,12 +39,7 @@ const posts = await Astro.glob('./posts/*.md');
         <span id="name-subheading">Hi, ich bin</span>
         <h1 id="name-heading">Maximilian</h1>
       </div>
-      <ul class="pills pills--large">
-        <li><h2>Web Development</h2></li>
-        <li><h2>Symfony</h2></li>
-        <li><h2>WordPress</h2></li>
-        <li><h2>UI/UX</h2></li>
-      </ul>
+      <Pills pills={cornerstones} size="large" />
       <a href="#about" class="scroll-indicator" id="scrollindicator">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -35,6 +58,7 @@ const posts = await Astro.glob('./posts/*.md');
       <img src="blob2.svg" class="blob" id="blob2" />
     </div>
   </section>
+
   <section id="about" class="bg-primary">
     <div class="content">
       <h2>Über mich</h2>
@@ -57,31 +81,12 @@ const posts = await Astro.glob('./posts/*.md');
         </strong>
       </p>
       <h3>Skills</h3>
-      <ul class="pills pills--large pills--slider">
-        <li>PHP</li>
-        <li>HTML</li>
-        <li>JavaScript</li>
-        <li>CSS (Sass, Less)</li>
-        <li>Symfony</li>
-        <li>React</li>
-        <li>SQL</li>
-        <li>GraphQL</li>
-        <li>GSAP</li>
-        <li>Versionsverwaltung (Git)</li>
-      </ul>
+      <Pills pills={skills} size="large" variant="grid" />
       <h3>Tools</h3>
-      <ul class="pills pills--large pills--slider">
-        <li>Jira</li>
-        <li>Visual Studio Code</li>
-        <li>PHPStorm</li>
-        <li>WordPress</li>
-        <li>Github</li>
-        <li>Office 365</li>
-        <li>Figma / Penpot</li>
-        <li>Linux Shell</li>
-      </ul>
+      <Pills pills={tools} size="large" variant="grid" />
     </div>
   </section>
+
   <section id="posts">
     <div class="content">
       <h2>Posts</h2>
@@ -90,6 +95,7 @@ const posts = await Astro.glob('./posts/*.md');
       </div>
     </div>
   </section>
+
   <section id="contact" class="bg-secondary text-primary section--compact">
     <div class="content">
       <h2>Kontakt</h2>

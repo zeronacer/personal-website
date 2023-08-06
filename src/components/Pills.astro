@@ -1,0 +1,15 @@
+---
+interface Props {
+  pills: Array<string>;
+  size?: "large";
+  variant?: "grid";
+}
+
+const { pills, size, variant } = Astro.props;
+const sizeClass = size ? `pills--${size}` : "";
+const variantClass = variant ? `pills--${variant}` : "";
+---
+
+<ul class:list={["pills", sizeClass, variantClass]}>
+  {pills.map((pill) => <li>{pill}</li>)}
+</ul>
