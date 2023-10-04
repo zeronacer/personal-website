@@ -1,7 +1,7 @@
 a.button {
   text-decoration: none;
   color: $primary;
-  background-color: $secondary;
+  background-color: $accent;
   border-radius: 2rem;
   padding: 1rem 2rem;
   font-size: 1.1rem;
@@ -13,7 +13,7 @@ a.button {
   align-items: center;
 
   &:hover {
-    background-color: $accent;
+    background-color: $accent-dark;
   }
 }
 
