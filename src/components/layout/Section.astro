@@ -1,0 +1,9 @@
+---
+const { class: additionalClasses } = Astro.props;
+---
+
+<section class:list={["px-0", "py-24", "relative", additionalClasses]}>
+  <div class="flex flex-col max-w-[80vw] m-auto px-8 py-0">
+    <slot />
+  </div>
+</section>

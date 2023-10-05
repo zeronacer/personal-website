@@ -1,0 +1,25 @@
+---
+import Pill from "./Pill.astro";
+interface Props {
+  pills: Array<string>;
+  variant?: "normal" | "large";
+  class?: string;
+}
+
+const { pills, variant, class: additionalClasses } = Astro.props;
+---
+
+<ul
+  class:list={[
+    "flex",
+    "xl:flex-col",
+    "list-none",
+    "p-0",
+    "m-0",
+    "gap-4",
+    "flex-wrap",
+    additionalClasses,
+  ]}
+>
+  {pills.map((pill) => <Pill label={pill} variant={variant} />)}
+</ul>

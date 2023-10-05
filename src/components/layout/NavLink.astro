@@ -1,0 +1,9 @@
+---
+const {href, label} = Astro.props; 
+---
+
+<li class="relative">
+    <a href={href} class="text-primary text-xl font-semibold decoration-0 transition-all hover:text-secondary focus:text-secondary active:text-accent">
+        {label}
+    </a>
+</li>

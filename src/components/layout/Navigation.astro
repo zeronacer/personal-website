@@ -1,0 +1,50 @@
+---
+import { sections } from "../../sections.js";
+import NavLink from "./NavLink.astro";
+
+interface Props {
+  variant: "transparent" | "opaque";
+  class?: string;
+}
+
+const { variant, class: additionalClasses } = Astro.props;
+---
+
+<style>
+  .header {
+    @apply absolute top-0 left-0 w-full flex justify-between items-center py-6 px-12 z-10 text-primary;
+  }
+
+  .header--transparent {
+  }
+
+  .header--opaque {
+    @apply bg-secondary relative;
+  }
+</style>
+
+<header class:list={["header", `header--${variant}`, additionalClasses]}>
+  <div class="logo">
+    <a href="/">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-8 text-white"
+        ><polyline points="16 18 22 12 16 6"></polyline><polyline
+          points="8 6 2 12 8 18"></polyline></svg
+      >
+    </a>
+  </div>
+  <nav>
+    <ul class="list-none flex gap-8 m-0 p-0">
+      {sections.about && <NavLink label="Über" href="/#about" />}
+      {sections.blog && <NavLink label="Blog" href="/#blog" />}
+      {sections.contact && <NavLink label="Kontakt" href="/#contact" />}
+    </ul>
+  </nav>
+</header>
