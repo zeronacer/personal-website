@@ -1,25 +1,32 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 
-const {frontmatter} = Astro.props;
+const { frontmatter } = Astro.props;
 
 const dateOptions: object = {
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-}
-const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString("de-DE", dateOptions);
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString(
+  "de-DE",
+  dateOptions
+);
 ---
 
-<BaseLayout headerVariant="solid">
-    <section id="post">
-        <div class="content">
-            <h1>{frontmatter.title}</h1>
-            <p>{formattedDate}</p>
-            <p><em>{frontmatter.description}</em></p>
-            <p>Written by: {frontmatter.author}</p>
-            <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-            <slot />
-        </div>
-    </section>
+<BaseLayout headerVariant="opaque">
+  <section id="post">
+    <div class="content">
+      <h1>{frontmatter.title}</h1>
+      <p>{formattedDate}</p>
+      <p><em>{frontmatter.description}</em></p>
+      <p>Written by: {frontmatter.author}</p>
+      <img
+        src={frontmatter.image.url}
+        width="300"
+        alt={frontmatter.image.alt}
+      />
+      <slot />
+    </div>
+  </section>
 </BaseLayout>
