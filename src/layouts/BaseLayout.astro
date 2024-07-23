@@ -1,14 +1,5 @@
 ---
-import Navigation from "../components/layout/Navigation.astro";
-import Footer from "../components/layout/Footer.astro";
-import "../styles/css-reset.css";
 import "../styles/main.css";
-
-interface Props {
-  headerVariant: "transparent" | "opaque";
-}
-
-const { headerVariant } = Astro.props;
 ---
 
 <html lang="en">
@@ -22,10 +13,8 @@ const { headerVariant } = Astro.props;
   <body
     class="bg-white text-black w-screen overflow-x-hidden relative font-inter"
   >
-    <Navigation variant={headerVariant} />
     <main>
       <slot />
     </main>
-    <Footer />
   </body>
 </html>
