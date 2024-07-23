@@ -3,12 +3,14 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		colors: {
-			// https://www.realtimecolors.com/?colors=212121-fafafa-488157-dad7cd-3a5a40&fonts=Inter-Inter
+			// https://colorhunt.co/palette/11423287a922fcdc2af7f6bb
+			// https://www.realtimecolors.com/?colors=212121-fafafa-87A922-F7F6BB-FCDC2A&fonts=Inter-Inter
+
 			'white': '#fafafa',
 			'black': "#212121",
-			'primary': '#488157',
-			'secondary': '#dad7cd',
-			'accent': '#3a5a40',
+			'primary': '#87A922',
+			'secondary': '#F7F6BB',
+			'accent': '#FCDC2A',
 		},
 		fontFamily: {
 			'inter': ['Inter', 'sans-serif'],
