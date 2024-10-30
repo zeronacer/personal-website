@@ -1,15 +1,13 @@
 ---
-import BlogPost from "../BlogPost.astro";
-import Section from "../layout/Section.astro";
+import { BlogPost } from "@components/index";
+import { Section } from "@sections/index";
 
 const posts = await Astro.glob("../../pages/posts/*.md");
 ---
 
 <Section id="blog">
-    <h2>Neuste Blog-Einträge</h2>
-    <div class="grid">
-      {posts.map((post) => (
-        <BlogPost post={post} />
-      ))}
-    </div>
-  </Section>
+  <h2>Neuste Blog-Einträge</h2>
+  <div class="grid">
+    {posts.map((post) => <BlogPost post={post} />)}
+  </div>
+</Section>
