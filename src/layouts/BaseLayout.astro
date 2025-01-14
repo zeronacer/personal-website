@@ -1,31 +1,29 @@
 ---
-import { Navigation, Footer } from "@layout/index";
+import "@hackernoon/pixel-icon-library/fonts/iconfont.css";
 import "../styles/css-reset.css";
-import "../styles/main.css";
-
-interface Props {
-  headerVariant: "transparent" | "opaque";
-}
-
-const { headerVariant } = Astro.props;
+import "../styles/fonts.css";
+import "../styles/typography.css";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <script defer src="https://analytics.grabau.dev/script.js"></script>
     <title>Maximilian Grabau</title>
   </head>
-  <body
-    class="bg-white text-black w-screen overflow-x-hidden relative font-inter"
-  >
-    <Navigation variant={headerVariant} />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+  <body>
+    <slot />
   </body>
 </html>
+
+<style>
+  html,
+  body {
+    perspective: 1000px;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+  }
+</style>

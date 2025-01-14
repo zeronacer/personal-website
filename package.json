@@ -11,10 +11,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "5.1.4",
-    "astro": "5.1.6",
-    "gsap": "^3.12.5",
-    "sass": "^1.83.1",
-    "tailwindcss": "^3.4.17"
+    "@hackernoon/pixel-icon-library": "^1.0.4",
+    "astro": "5.1.6"
   }
 }

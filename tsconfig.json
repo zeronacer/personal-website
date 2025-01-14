@@ -3,12 +3,6 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "baseUrl": "./src",
-    "paths": {
-      "@pages/*": ["pages/*"],
-      "@components/*": ["components/*"],
-      "@layout/*": ["components/layout/*"],
-      "@sections/*": ["components/sections/*"]
-    }
   },
   "include": [
     "src/**/*.d.ts",
