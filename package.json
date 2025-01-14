@@ -11,6 +11,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@hackernoon/pixel-icon-library": "^1.0.4",
     "astro": "5.1.6"
   }
 }

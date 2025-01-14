@@ -11,6 +11,17 @@ import MapBackground from "components/MapBackground.astro";
       <li>Software Engineer</li>
       <li>Hamburg, Germany</li>
     </ul>
+    <div class="link-wrapper">
+      <a
+        href="https://www.linkedin.com/in/maximilian-grabau/"
+        title="LinkedIn Profile"
+      >
+        <i class="hn hn-linkedin"></i>
+      </a>
+      <a href="https://github.com/zeronacer" title="Github Profile">
+        <i class="hn hn-github"></i>
+      </a>
+    </div>
   </main>
 </BaseLayout>
 
@@ -42,6 +53,28 @@ import MapBackground from "components/MapBackground.astro";
     *:not(:last-child)::after {
       content: "-";
       margin: 0 0.5em;
+    }
+  }
+
+  div.link-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    margin-top: 1em;
+
+    a {
+      display: inline-block;
+      font-size: 1.5em;
+      color: white;
+      text-decoration: none;
+      transition: all 200ms;
+
+      &:hover {
+        transform-origin: center;
+        transform: scale(1.3);
+      }
     }
   }
 </style>
