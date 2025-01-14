@@ -6,7 +6,11 @@ import MapBackground from "components/MapBackground.astro";
 <BaseLayout>
   <MapBackground />
   <main>
-    <h1>grabau.dev</h1>
+    <h1 class="site-title">grabau.dev</h1>
+    <ul class="traits">
+      <li>Software Engineer</li>
+      <li>Hamburg, Germany</li>
+    </ul>
   </main>
 </BaseLayout>
 
@@ -17,5 +21,27 @@ import MapBackground from "components/MapBackground.astro";
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    text-align: center;
+  }
+
+  .site-title {
+    font-size: 3.5em;
+  }
+
+  ul.traits {
+    font-family: "Micro 5", monospace;
+    font-size: 1.5em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    *:not(:last-child)::after {
+      content: "-";
+      margin: 0 0.5em;
+    }
   }
 </style>
