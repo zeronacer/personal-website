@@ -1,0 +1,62 @@
+  /* fira-mono-500 - latin */
+  @font-face {
+    font-family: "Fira Mono";
+    font-style: normal;
+    font-weight: 500;
+    src: local(""), url("/fonts/fira-mono-v14-latin-500.woff2") format("woff2"),
+      url("/fonts/fira-mono-v14-latin-500.woff") format("woff");
+  }
+
+  /* micro-5-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Micro 5';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/micro-5-v1-latin-regular.woff2') format('woff2');
+  }
+
+  /* jacquard-12-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Jacquard 12';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/jacquard-12-v6-latin-regular.woff2') format('woff2');
+  }
+
+  /* noto-sans-200 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('/fonts/noto-sans-v38-latin-200.woff2') format('woff2');
+  }
+
+  /* noto-sans-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/noto-sans-v38-latin-regular.woff2') format('woff2');
+  }
+
+  /* noto-sans-600 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/noto-sans-v38-latin-600.woff2') format('woff2');
+  }
+
+  /* noto-sans-800 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/fonts/noto-sans-v38-latin-800.woff2') format('woff2');
+  }
