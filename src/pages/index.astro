@@ -1,37 +1,16 @@
 ---
-import "styles/css-reset.css";
-import "styles/main.css";
+import BaseLayout from "layouts/BaseLayout.astro";
+import MapBackground from "components/MapBackground.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <script defer src="https://analytics.grabau.dev/script.js"></script>
-    <title>Maximilian Grabau</title>
-  </head>
-  <body>
-    <div id="background"></div>
-    <div id="static"></div>
-    <div id="vignette"></div>
-    <main>
-      <h1>grabau.dev</h1>
-    </main>
-  </body>
-</html>
+<BaseLayout>
+  <MapBackground />
+  <main>
+    <h1>grabau.dev</h1>
+  </main>
+</BaseLayout>
 
 <style>
-  html,
-  body {
-    perspective: 1000px;
-    height: 100vh;
-    overflow: hidden;
-    background-color: black;
-    font-family: "Jacquard 12";
-  }
-
   main {
     position: fixed;
     top: 50%;
@@ -39,129 +18,4 @@ import "styles/main.css";
     transform: translate(-50%, -50%);
     color: white;
   }
-
-  #background-image {
-    transform: translateZ(30px);
-    min-width: 100%;
-    height: 100%;
-    opacity: 0.3;
-
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
-
-  #background {
-    width: 100%;
-    height: 100%;
-    opacity: 0.2;
-    background: center url("map.svg") no-repeat;
-    background-size: cover;
-    transform: translateZ(30px);
-  }
-
-  #static {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    right: -50%;
-    bottom: -50%;
-    width: 200%;
-    height: 200vh;
-    background: transparent url("/noise-transparent.png") repeat 0 0;
-    background-repeat: repeat;
-    animation: bg-animation 0.2s infinite;
-    visibility: visible;
-    pointer-events: none;
-  }
-
-  #vignette {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
-    pointer-events: none;
-  }
-
-  @keyframes bg-animation {
-    0% {
-      transform: translate(0, 0);
-    }
-    10% {
-      transform: translate(-5%, -5%);
-    }
-    20% {
-      transform: translate(-10%, 5%);
-    }
-    30% {
-      transform: translate(5%, -10%);
-    }
-    40% {
-      transform: translate(-5%, 15%);
-    }
-    50% {
-      transform: translate(-10%, 5%);
-    }
-    60% {
-      transform: translate(15%, 0);
-    }
-    70% {
-      transform: translate(0, 10%);
-    }
-    80% {
-      transform: translate(-15%, 0);
-    }
-    90% {
-      transform: translate(10%, 5%);
-    }
-    100% {
-      transform: translate(5%, 0);
-    }
-  }
 </style>
-
-<script>
-  function getNormalizedMousePosition(event, element) {
-    // Get the bounding rectangle of the element
-    const rect = element.getBoundingClientRect();
-
-    // Calculate the mouse position relative to the element
-    const mouseX = event.clientX - rect.left; // Mouse X relative to the element
-    const mouseY = event.clientY - rect.top; // Mouse Y relative to the element
-
-    // Normalize the mouse position to a range of -1 to 1
-    const normalizedX = (mouseX / rect.width) * 2 - 1; // Normalize X
-    const normalizedY = (mouseY / rect.height) * 2 - 1; // Normalize Y
-
-    return { x: normalizedX, y: -normalizedY }; // Invert Y-axis for Cartesian coordinates
-  }
-
-  const element = document.getElementById("background");
-  element.addEventListener("mousemove", (event) => {
-    const position = getNormalizedMousePosition(event, element);
-    element.style["transform"] =
-      `translateZ(30px) rotateX(${position.y}deg) rotateY(${position.x}deg)`;
-  });
-
-  function disableImgDragging() {
-    var images = document.getElementsByTagName("img");
-    for (var i = 0; i < images.length; i++) {
-      images[i].classList.add("no-drag");
-      images[i].setAttribute("no-drag", "on");
-      images[i].setAttribute("draggable", "false");
-      images[i].addEventListener(
-        "dragstart",
-        function (event) {
-          event.preventDefault();
-        },
-        false,
-      );
-    }
-  }
-  disableImgDragging();
-</script>
