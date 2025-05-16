@@ -1,9 +1,10 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection, render } from "astro:content";
+import BaseLayout from "layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
-  const articles = await getCollection('blog');
-  return articles.map(article => ({
+  const articles = await getCollection("blog");
+  return articles.map((article) => ({
     params: { id: article.id },
     props: { article },
   }));
@@ -13,5 +14,9 @@ const { article } = Astro.props;
 const { Content } = await render(article);
 ---
 
-<h1>{article.data.title}</h1>
-<Content />
+<BaseLayout>
+  <article class="prose mx-auto dark:prose-invert prose-zinc">
+    <h1>{article.data.title}</h1>
+    <Content />
+  </article>
+</BaseLayout>
