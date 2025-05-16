@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+    --font-jacquard: 'Jacquard 12', Times, serif;
+}
