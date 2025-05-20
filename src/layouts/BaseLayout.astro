@@ -1,6 +1,6 @@
 ---
 import "@hackernoon/pixel-icon-library/fonts/iconfont.css";
-import "../styles/global.css"
+import "../styles/global.css";
 ---
 
 <html lang="en">
@@ -10,17 +10,7 @@ import "../styles/global.css"
     <meta name="generator" content={Astro.generator} />
     <title>grabau.dev</title>
   </head>
-  <body>
+  <body class="perspective-distant h-screen overflow-hidden bg-black">
     <slot />
   </body>
 </html>
-
-<style>
-  html,
-  body {
-    perspective: 1000px;
-    height: 100vh;
-    overflow: hidden;
-    background-color: black;
-  }
-</style>
