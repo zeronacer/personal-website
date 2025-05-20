@@ -6,6 +6,7 @@
 @theme {
   --font-jacquard: "Jacquard 12", Times, serif;
   --font-micro: "Micro 5", monospace;
+  --font-funnel: "Funnel Sans", sans-serif;
 
   --animate-static: bg-animation 0.2s infinite;
 
