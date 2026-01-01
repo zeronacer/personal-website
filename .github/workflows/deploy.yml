@@ -18,6 +18,10 @@ jobs:
         runs-on: ubuntu-latest
         needs: build
         steps:
+            - name: Download build artifact
+              uses: actions/download-artifact@v5
+              with:
+                  name: github-pages
             - uses: shallwefootball/s3-upload-action@master
               with:
                   aws_key_id: ${{ secrets.S3_KEY_ID }}
