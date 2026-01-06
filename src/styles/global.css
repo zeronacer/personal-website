@@ -4,6 +4,7 @@
 @import "./fonts.css";
 
 @theme {
+  --font-fira: "Fira Mono", monospace;
   --font-jacquard: "Jacquard 12", Times, serif;
   --font-micro: "Micro 5", monospace;
   --font-funnel: "Funnel Sans", sans-serif;

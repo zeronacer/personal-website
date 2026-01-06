@@ -10,9 +10,9 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>grabau.dev</title>
   </head>
-  <body
-    class="font-funnel h-screen overflow-hidden bg-zinc-950"
-  >
-    <slot />
+  <body class="font-funnel bg-zinc-950 h-screen w-screen overflow-hidden">
+    <div class="grid gap-0.5 grid-cols-[128px_1fr_128px] grid-rows-[128px_1fr_128px] h-full w-full">
+      <slot />
+    </div>
   </body>
 </html>

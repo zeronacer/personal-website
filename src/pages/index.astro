@@ -1,13 +1,22 @@
 ---
 import BaseLayout from "layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
+import GridCell from "../components/GridCell.astro";
 ---
 
 <BaseLayout>
-  <main class="fixed top-1/2 left-1/2 -translate-1/2 text-center text-white">
-    <h1 class="font-jacquard text-6xl">grabau.dev</h1>
-    <ul class="font-micro flex content-center items-center gap-4 text-2xl">
-      <li>Software Engineer</li>
-      <li>Hamburg, Germany</li>
-    </ul>
+  <GridCell />
+  <GridCell />
+  <GridCell />
+
+  <GridCell />
+  <main class="text-center text-white flex flex-col items-center justify-center">
+    <h1 class="font-jacquard text-6xl place-self-center">grabau.dev</h1>
+    <span class="font-fira">Software Engineer, Hamburg</span>
   </main>
+  <GridCell />
+
+  <GridCell />
+  <GridCell />
+  <GridCell />
 </BaseLayout>
